@@ -1,41 +1,73 @@
-.header {
-  width: 100%;
-  height: 70px;
-  background-color: inherit;
-  display: flex;
-  position: sticky;
-  top: 0;
-}
-.header .nav {
-  width: 100%;
+.header .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header .nav .nav-links {
-  align-items: center;
-  display: flex;
-  gap: 15px;
-}
-.header .nav .nav_auth {
+.header .navbar .nav_right {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.header .nav .singin {
-  padding: 10px 24px;
+.header .navbar .nav_links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  color: #ccc;
+}
+.header .navbar .header_btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header .navbar .header_btns .hamburger_menu {
+  display: none;
+}
+.header .navbar .header_btns .SingIn {
+  padding: 10px 23px;
   background-color: transparent;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-.header .nav .singUp {
-  padding: 10px 24px;
+.header .navbar .header_btns .SingUp {
+  padding: 10px 23px;
   background-color: rgb(2, 137, 122);
-  color: #fff;
   border: none;
   border-radius: 5px;
 }
+.header .navbar .btn_user img {
+  width: 30px;
+  height: 30px;
+}
 
+@media (max-width: 1220px) {
+  .header .navbar {
+    padding: 0 70px;
+  }
+}
+@media (max-width: 1060px) {
+  .header .navbar {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 1000px) {
+  .header .navbar {
+    padding: 0 0;
+  }
+}
+@media (max-width: 900px) {
+  .header .navbar .nav_right .nav_links {
+    display: none;
+  }
+  .header .navbar .nav_right .header_btns .hamburger_menu {
+    display: block;
+  }
+}
+@media (max-width: 580px) {
+  .header .navbar .nav_right .header_btns {
+    display: none;
+  }
+}
 * {
   margin: 0;
   padding: 0;
